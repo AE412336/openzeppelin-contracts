@@ -1,0 +1,13 @@
+pragma solidity ^0.5.2;
+
+import "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
+import "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol";
+import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
+
+contract CryptoastToken is ERC20, ERC20Detailed, Ownable {
+
+  constructor() ERC20Detailed("LIBERTY", "LBT", 0) public {
+    _mint(msg.sender, NB_TOKEN * 10000000000000000 ** uint256(0));
+  }
+
+}
